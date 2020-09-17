@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+![GitHub release (latest by date including
+pre-releases)](https://img.shields.io/github/v/release/Neves-P/phylometricsims?include_prereleases)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis build
@@ -13,46 +15,23 @@ status](https://travis-ci.com/Neves-P/phylometricsims.svg?branch=master)](https:
 status](https://ci.appveyor.com/api/projects/status/github/Neves-P/phylometricsims?branch=master&svg=true)](https://ci.appveyor.com/project/Neves-P/phylometricsims)
 <!-- badges: end -->
 
-The goal of phylometricsims is to …
+The goal of phylometricsims is to simulate and parse DAISIE output to
+contribute to the [sELDIG Simulation
+Study](https://github.com/sELDIG/SimulationStudy).
 
 ## Installation
 
-You can install the released version of phylometricsims from
-[CRAN](https://CRAN.R-project.org) with:
+You can install the released version of `phylometricsims` from
+[GitHub](https://github.com/Neves-P/phylometricsims) with:
 
 ``` r
-install.packages("phylometricsims")
+install.packages("remotes")
+remotes::install_github("Neves-P/phylometricsims")
 ```
 
-## Example
+## Support/Bug reports
 
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-library(phylometricsims)
-## basic example code
-```
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub\!
+If you’d like to submit a bug report, or otherwise ask for support,
+please open an
+[issue](https://github.com/Neves-P/phylometricsims/issues), or email
+p.m.santos.neves AT rug.nl.

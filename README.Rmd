@@ -16,42 +16,23 @@ knitr::opts_chunk$set(
 # phylometricsims
 
 <!-- badges: start -->
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Neves-P/phylometricsims?include_prereleases)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis build status](https://travis-ci.com/Neves-P/phylometricsims.svg?branch=master)](https://travis-ci.com/Neves-P/phylometricsims)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/Neves-P/phylometricsims?branch=master&svg=true)](https://ci.appveyor.com/project/Neves-P/phylometricsims)
 <!-- badges: end -->
 
-The goal of phylometricsims is to ...
+The goal of phylometricsims is to simulate and parse DAISIE output to contribute to the [sELDIG Simulation Study](https://github.com/sELDIG/SimulationStudy).
 
 ## Installation
 
-You can install the released version of phylometricsims from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of `phylometricsims` from [GitHub](https://github.com/Neves-P/phylometricsims) with:
 
 ``` r
-install.packages("phylometricsims")
+install.packages("remotes")
+remotes::install_github("Neves-P/phylometricsims")
 ```
 
-## Example
+## Support/Bug reports
 
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-library(phylometricsims)
-## basic example code
-```
-
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
+If you'd like to submit a bug report, or otherwise ask for support, please open an [issue](https://github.com/Neves-P/phylometricsims/issues), or email p.m.santos.neves AT rug.nl.
