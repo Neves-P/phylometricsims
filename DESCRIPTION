@@ -11,7 +11,9 @@ Description: Simulates island-wide DAISIE output for sELDIG simulation
     comparison study. Parses said output as per study requests.
 License: MIT + file LICENSE
 Suggests: 
-    testthat
+    testthat,
+    covr,
+    lintr
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

@@ -13,6 +13,8 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 status](https://travis-ci.com/Neves-P/phylometricsims.svg?branch=master)](https://travis-ci.com/Neves-P/phylometricsims)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/Neves-P/phylometricsims?branch=master&svg=true)](https://ci.appveyor.com/project/Neves-P/phylometricsims)
+[![Codecov test
+coverage](https://codecov.io/gh/Neves-P/phylometricsims/branch/master/graph/badge.svg)](https://codecov.io/gh/Neves-P/phylometricsims?branch=master)
 <!-- badges: end -->
 
 The goal of phylometricsims is to simulate and parse DAISIE output to
