@@ -18,5 +18,7 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports: 
     DAISIE (>= 3.0.1)
-Remotes:  
+Remotes: 
     rsetienne/DAISIE
+URL: https://github.com/Neves-P/phylometricsims
+BugReports: https://github.com/Neves-P/phylometricsims/issues
