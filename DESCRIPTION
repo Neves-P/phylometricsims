@@ -9,7 +9,7 @@ Authors@R:
            comment = c(ORCID = "0000-0003-2561-4677"))
 Description: Simulates island-wide DAISIE output for sELDIG simulation 
     comparison study. Parses said output as per study requests.
-License: MIT + file LICENSE
+License: GPL-3
 Suggests: 
     testthat,
     covr,
