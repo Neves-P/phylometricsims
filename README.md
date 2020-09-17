@@ -7,8 +7,9 @@
 
 ![GitHub release (latest by date including
 pre-releases)](https://img.shields.io/github/v/release/Neves-P/phylometricsims?include_prereleases)
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Project Status: WIP – Initial development is in progress, but there
+has not yet been a stable, usable release suitable for the
+public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![Travis build
 status](https://travis-ci.com/Neves-P/phylometricsims.svg?branch=master)](https://travis-ci.com/Neves-P/phylometricsims)
 [![AppVeyor build
