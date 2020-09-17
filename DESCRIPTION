@@ -1,6 +1,6 @@
 Package: phylometricsims
 Title: Simulate DAISIE Islands for Phylogenetic Metric Comparison
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: 
     person(given = "Pedro",
            family = "Neves",
