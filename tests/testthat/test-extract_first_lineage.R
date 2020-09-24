@@ -18,8 +18,7 @@ test_that("use", {
 
 
   expect_length(brts_list, n_replicates)
-  expect_equal(brts_list[[1]], c(1, 0.924481816687166))
-  expect_equal(brts_list[[2]], c(1, 0.81346475594585899))
-
+  expect_equal(brts_list[[1]], c(4, 1.2478108191158299))
+  expect_equal(brts_list[[2]], c(4, 0.2611766125835))
 
 })
