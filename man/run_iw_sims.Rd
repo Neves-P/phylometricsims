@@ -4,7 +4,7 @@
 \alias{run_iw_sims}
 \title{Run DAISIE IW simulations}
 \usage{
-run_iw_sims(totaltime, sim_pars, n_mainland_spec, replicates)
+run_iw_sims(totaltime, sim_pars, n_mainland_spec, n_replicates, seed_start)
 }
 \arguments{
 \item{totaltime}{Positive numeric. Specifies how the age of the island to be
@@ -23,14 +23,27 @@ simulated by \code{\link[DAISIE:DAISIE_sim]{DAISIE::DAISIE_sim_constant_rate()}}
 \item{n_mainland_spec}{Positive Integer with total number of species in the
 mainland pool, which can colonize the island.}
 
-\item{replicates}{Positive integer with the total number of replicates of the
+\item{n_replicates}{Positive integer with the total number of replicates of the
 same island that should be simulated.}
+
+\item{seed_start}{Integer specifying the seed of replicate 1. Each replicate
+w  of a given param set will be simulated using seed 1:n_replicates.}
 }
 \value{
 DAISIE object containing IW simulations.
 }
 \description{
 Run DAISIE IW simulations
+}
+\examples{
+out <- phylometricsims:::run_iw_sims(
+  totaltime = 4,
+  sim_pars = c(1, 2, 3, 4, 5),
+  n_mainland_spec = 1000,
+  n_replicates = 2,
+  seed_start = 1
+)
+
 }
 \author{
 Pedro Neves
