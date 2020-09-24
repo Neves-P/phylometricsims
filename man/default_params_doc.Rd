@@ -30,8 +30,8 @@ simulated by \code{\link[DAISIE:DAISIE_sim]{DAISIE::DAISIE_sim_constant_rate()}}
 \item{n_mainland_spec}{Positive Integer with total number of species in the
 mainland pool, which can colonize the island.}
 
-\item{n_replicates}{Positive integer with the total number of replicates of the
-same island that should be simulated.}
+\item{n_replicates}{Positive integer with the total number of replicates of
+the same island that should be simulated.}
 
 \item{seed_start}{Integer specifying the seed of replicate 1. Each replicate
 w  of a given param set will be simulated using seed 1:n_replicates.}
