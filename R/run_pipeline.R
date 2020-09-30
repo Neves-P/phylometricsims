@@ -1,16 +1,25 @@
-run_pipeline <- function(experiment_name,
-                         n_replicates = 1000,
+run_pipeline <- function(param_set,
+                         n_replicates = 1,
                          seed_start = 1) {
 
-  # extract_parameters
+  load("data/param_space.rda")
+  sim_pars <- param_space[param_set, ]
 
-  # run_iw_sims
+  iw_sims <- run_iw_sims(
+    n_replicates = n_replicates,
+    sim_pars = sim_pars,
+    n_mainland_spec = 1000,
+    seed_start = seed_start
+  )
 
-  # extract_first_lineage
+  iw_brts <- extract_first_lineage_brts(iw_sims)
 
-  # convert_to_phylo
+  phylo <- DDD::brts2phylo(times = iw_brts)
+
+  output <- list(iw_sims = iw_sims, iw_brts = iw_brts, phylo = phylo)
 
   # save_file
 
 
 }
+
