@@ -27,14 +27,14 @@ run_pipeline <- function(param_set,
   phylo <- convert_to_phylo(iw_brts)
 
   output <- list(iw_sims = iw_sims, iw_brts = iw_brts, phylo = phylo)
-  sim_ID <- as.character(sim_pars[param_set, 1])
+  sim_id <- as.character(sim_pars[param_set, 1])
 
-  output_name <- paste0("ve_", sim_ID, ".rds")
-  if(!dir.exists("output")) dir.create("output")
+  output_name <- paste0("ve_", sim_id, ".rds")
+  if (!dir.exists("output")) dir.create("output")
   output_path <- file.path("output", output_name)
 
-  tree_name <- paste0("ve_", sim_ID, ".tree")
-  if(!dir.exists("trees")) dir.create("trees")
+  tree_name <- paste0("ve_", sim_id, ".tree")
+  if (!dir.exists("trees")) dir.create("trees")
   tree_path <- file.path("trees", tree_name)
 
   for (replicate in n_replicates) {
@@ -43,7 +43,4 @@ run_pipeline <- function(param_set,
     }
   }
       saveRDS(object = output, file = output_path)
-
-
 }
-
