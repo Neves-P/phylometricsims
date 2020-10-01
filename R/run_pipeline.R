@@ -12,7 +12,7 @@ run_pipeline <- function(param_set,
                          n_replicates = 1,
                          seed_start = 1) {
 
-  data(param_space)
+  param_space <- utils::read.csv(file = "data/param_space.csv")
   sim_pars <- param_space[param_set, ]
 
   iw_sims <- run_iw_sims(

@@ -30,5 +30,5 @@ sample_params <- function(param_limits, n = 1000, seed = 1, startingSimID = 1) {
 
 param_space <- sample_params(param_limits)
 
-usethis::use_data(param_space, overwrite = TRUE)
+write.csv(x = param_space, file = "data/param_space.csv", row.names = FALSE)
 
