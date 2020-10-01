@@ -12,7 +12,7 @@ run_pipeline <- function(param_set,
                          n_replicates = 1,
                          seed_start = 1) {
 
-  load("data/param_space.rda")
+  data(param_space)
   sim_pars <- param_space[param_set, ]
 
   iw_sims <- run_iw_sims(
