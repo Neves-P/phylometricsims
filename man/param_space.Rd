@@ -19,12 +19,6 @@ A data frame with 1000 rows and 5 parameters:
 data_raw/param_space.R
 }
 \description{
-Data frame with DAISIE IW parameter space
-}
-\section{param_space.csv}{
-
-
 A dataset containing 1000 randomly sampled parameter combinations for a
 DAISIE IW simulation.
 }
-

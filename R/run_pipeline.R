@@ -5,14 +5,18 @@
 #' @return Save output to output and trees folder. Generate .tree file if >
 #'   20 tips are created.
 #' @export
-#'
-#' @examples
-#' run_pipeline(param_set = 1)
 run_pipeline <- function(param_set,
                          n_replicates = 1,
                          seed_start = 1) {
 
-  param_space <- utils::read.csv(file = "data/param_space.csv")
+  param_space <- utils::read.csv(
+    file = system.file(
+      "extdata",
+      "param_space.csv",
+      package = "phylometricsims",
+      mustWork = TRUE
+    )
+  )
   sim_pars <- param_space[param_set, ]
 
   iw_sims <- run_iw_sims(
@@ -42,5 +46,5 @@ run_pipeline <- function(param_set,
       ape::write.tree(phy = phylo[[replicate]], file = tree_path)
     }
   }
-      saveRDS(object = output, file = output_path)
+  saveRDS(object = output, file = output_path)
 }

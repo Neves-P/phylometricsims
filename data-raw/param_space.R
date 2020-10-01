@@ -19,7 +19,7 @@ sample_params <- function(param_limits, n = 1000, seed = 1, startingSimID = 1) {
 
   for (i in 1:nrow(param_limits)) {
     output <- cbind(output,
-                   data.frame(runif(n) *
+                    data.frame(runif(n) *
                                  (param_limits$max[i] -
                                     param_limits$min[i]) + param_limits$min[i]))
   }
@@ -30,5 +30,9 @@ sample_params <- function(param_limits, n = 1000, seed = 1, startingSimID = 1) {
 
 param_space <- sample_params(param_limits)
 
-write.csv(x = param_space, file = "data/param_space.csv", row.names = FALSE)
+write.csv(
+  x = param_space,
+  file = "inst/extdata/param_space.csv",
+  row.names = FALSE
+)
 

@@ -23,6 +23,3 @@ Save output to output and trees folder. Generate .tree file if >
 \description{
 Run the pipeline for a single parameter set
 }
-\examples{
-run_pipeline(param_set = 1)
-}

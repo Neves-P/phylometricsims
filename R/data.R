@@ -2,11 +2,9 @@
 #'
 #' @name param_space
 #'
-#' @section param_space.csv:
-#'
+#' @description
 #' A dataset containing 1000 randomly sampled parameter combinations for a
 #' DAISIE IW simulation.
-#'
 #' @format A data frame with 1000 rows and 5 parameters:
 #' \describe{
 #'   \item{simID}{Integer with simualation ID}
