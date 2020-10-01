@@ -1,15 +1,13 @@
 test_that("use", {
 
-  totaltime <- 1
-  sim_pars <- c(1, 1, 20, 0.01, 1)
+  sim_pars <- c(1, 1, 1, 20, 0.01, 1, 1)
   n_mainland_spec <- 1000
   n_replicates <- 2
   seed_start <- 1
-
+  totaltime <- 1
 
   expect_silent(
     out <- phylometricsims:::run_iw_sims(
-      totaltime = totaltime,
       sim_pars = sim_pars,
       n_mainland_spec = n_mainland_spec,
       n_replicates = n_replicates,

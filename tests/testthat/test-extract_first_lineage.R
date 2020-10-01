@@ -1,13 +1,11 @@
 test_that("use", {
 
-  totaltime <- 4
-  sim_pars <- c(1, 2, 3, 4, 5)
+  sim_pars <- c(1, 1, 2, 3, 4, 5, 4)
   n_mainland_spec <- 1000
   n_replicates <- 2
   seed_start <- 1
 
   out <- phylometricsims:::run_iw_sims(
-    totaltime = totaltime,
     sim_pars = sim_pars,
     n_mainland_spec = n_mainland_spec,
     n_replicates = n_replicates,
