@@ -4,7 +4,6 @@
 #'
 #' @return List with a level per replicate, each containing a numeric vector
 #'   with branching times of first lineage of the simulation.
-#' @export
 #'
 #' @examples
 #' out <- phylometricsims:::run_iw_sims(
