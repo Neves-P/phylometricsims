@@ -22,7 +22,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' run_seldig_experiment(n_param_sets_to_run = 2000)
+#' run_seldig_experiment(n_param_sets_to_run = 3000)
 #' }
 run_seldig_experiment <- function(n_param_sets_to_run,
                                   n_replicates = 1) {
