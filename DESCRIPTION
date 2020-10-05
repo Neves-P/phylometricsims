@@ -27,4 +27,4 @@ Remotes:
 URL: https://github.com/Neves-P/phylometricsims
 BugReports: https://github.com/Neves-P/phylometricsims/issues
 Depends: 
-    R (>= 2.10)
+    R (>= 3.5.0)
