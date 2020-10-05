@@ -5,12 +5,6 @@
 #' @return List with phylo objects.
 convert_to_phylo <- function(brts, seed_start) {
 
-  set.seed(
-    seed = seed_start,
-    kind = "Mersenne-Twister",
-    normal.kind = "Inversion",
-    sample.kind = "Rejection"
-  )
 
     tree <- lapply(
       X = brts,
