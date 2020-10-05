@@ -1,4 +1,4 @@
-## code to prepare `param_space` dataset goes here
+## code to prepare `ve_USE_parameters` dataset goes here
 
 
 # Generation method adapted from Allen Hurlbert's code
@@ -12,7 +12,7 @@ param_limits <- data.frame(
 
 # Function for sampling parameter space
 
-sample_params <- function(param_limits, n = 1000, seed = 1, startingSimID = 1) {
+sample_params <- function(param_limits, n = 2000, seed = 1, startingSimID = 1) {
   set.seed(seed)
 
   output <- data.frame(simID = startingSimID:(startingSimID + n - 1))
@@ -32,7 +32,7 @@ param_space <- sample_params(param_limits)
 
 write.csv(
   x = param_space,
-  file = "inst/extdata/param_space.csv",
+  file = "inst/extdata/ve_USE_parameters.csv",
   row.names = FALSE
 )
 
