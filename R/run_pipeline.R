@@ -47,7 +47,7 @@ run_pipeline <- function(param_set,
 
   iw_brts <- extract_first_lineage_brts(iw_sims = iw_sims)
 
-  phylo <- convert_to_phylo(brts = iw_brts, seed_start = seed_start)
+  phylo <- convert_to_phylo(brts = iw_brts)
 
   output <- list(iw_sims = iw_sims, iw_brts = iw_brts, phylo = phylo)
   sim_id <- as.character(sim_pars[1])

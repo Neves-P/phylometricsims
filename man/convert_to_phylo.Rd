@@ -4,13 +4,10 @@
 \alias{convert_to_phylo}
 \title{Converts list of branching time vectors to phylo objects}
 \usage{
-convert_to_phylo(brts, seed_start)
+convert_to_phylo(brts)
 }
 \arguments{
 \item{brts}{List with vector of branching times as returned by}
-
-\item{seed_start}{Integer specifying the seed of replicate 1. Each replicate
-a given param set will be simulated using seed \code{1:n_replicates}.}
 }
 \value{
 List with phylo objects.
