@@ -27,7 +27,7 @@ mainland pool, which can colonize the island.}
 the same island that should be simulated.}
 
 \item{seed_start}{Integer specifying the seed of replicate 1. Each replicate
-a given param set will be simulated using seed 1:n_replicates.}
+a given param set will be simulated using seed \code{1:n_replicates}.}
 }
 \value{
 DAISIE object containing IW simulations.

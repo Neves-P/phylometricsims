@@ -14,12 +14,26 @@ data frame.}
 the same island that should be simulated.}
 
 \item{seed_start}{Integer specifying the seed of replicate 1. Each replicate
-a given param set will be simulated using seed 1:n_replicates.}
+a given param set will be simulated using seed \code{1:n_replicates}.}
 }
 \value{
-Save output to output and trees folder. Generate .tree file if >
+Saves output object to output and trees folder. Generate .tree file if >
 20 tips are created.
+Output object is a list containing the following elements:
+\itemize{
+\item DAISIE IW simulation objects
+\item Corresponding vector of branching times
+\item Corresponding branching times converted to phylo objects
+}
 }
 \description{
-Run the pipeline for a single parameter set
+Runs the full pipeline one parameter set (i.e., one row of the
+param_space.csv file). DAISIE simulations are generated, the first lineage,
+if any, is extracted. Associated branching times are converted to a phylo
+object which is then saved as a .tre file to the /trees folder, if there are
+more than 20 tips. Intermediate objects are saved as they are generated to
+output folder, as a list. See details in the Return section.
+}
+\author{
+Pedro Neves
 }
