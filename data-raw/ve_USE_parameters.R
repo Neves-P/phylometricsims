@@ -6,13 +6,13 @@
 param_limits <- data.frame(
   parameter = c("lac", "mu", "K", "gam", "laa", "totaltime"),
   min = c(1, .0001, 20, 0.0001, 0, 10),
-  max = c(4, 3, 150, 0.001, 1.5, 10)
+  max = c(4, 3, 150, 0.005, 1.5, 10)
 )
 
 
 # Function for sampling parameter space
 
-sample_params <- function(param_limits, n = 2000, seed = 1, startingSimID = 1) {
+sample_params <- function(param_limits, n = 2500, seed = 1, startingSimID = 1) {
   set.seed(seed)
 
   output <- data.frame(simID = startingSimID:(startingSimID + n - 1))
