@@ -29,7 +29,9 @@ island if the number of tips at the present exceeds 20. Save intermediate
 output to /output folder, see Return section for details.
 }
 \examples{
-run_seldig_experiment(n_param_sets_to_run = 2)
+\dontrun{
+run_seldig_experiment(n_param_sets_to_run = 2000)
+}
 }
 \seealso{
 \code{\link[=run_pipeline]{run_pipeline()}}
