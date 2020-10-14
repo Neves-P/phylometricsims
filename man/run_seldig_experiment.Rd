@@ -30,7 +30,7 @@ output to /output folder, see Return section for details.
 }
 \examples{
 \dontrun{
-run_seldig_experiment(n_param_sets_to_run = 2000)
+run_seldig_experiment(n_param_sets_to_run = 3000)
 }
 }
 \seealso{

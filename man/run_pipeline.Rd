@@ -4,7 +4,7 @@
 \alias{run_pipeline}
 \title{Run the pipeline for a single parameter set}
 \usage{
-run_pipeline(param_set, n_replicates = 1, seed_start = 1)
+run_pipeline(param_set, n_replicates = 1, seed_start = 1, save_to_file = TRUE)
 }
 \arguments{
 \item{param_set}{Positive integer. Corresponds to one line of the param_space
