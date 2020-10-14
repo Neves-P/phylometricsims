@@ -21,7 +21,8 @@
 #' @author Pedro Neves
 run_pipeline <- function(param_set,
                          n_replicates = 1,
-                         seed_start = 1) {
+                         seed_start = 1,
+                         save_to_file = TRUE) {
   if (!exists("param_space")) {
     param_space <- utils::read.csv(
       file = system.file(
@@ -60,10 +61,14 @@ run_pipeline <- function(param_set,
   if (!dir.exists("trees")) dir.create("trees")
   tree_path <- file.path("trees", tree_name)
 
-  for (replicate in n_replicates) {
-    if (length(phylo[[replicate]]$tip.label) >= 20) {
-      ape::write.tree(phy = phylo[[replicate]], file = tree_path)
+  if (save_to_file) {
+    for (replicate in n_replicates) {
+      if (length(phylo[[replicate]]$tip.label) >= 20) {
+        ape::write.tree(phy = phylo[[replicate]], file = tree_path)
+      }
     }
+    saveRDS(object = output, file = output_path)
+  } else {
+    return(output)
   }
-  saveRDS(object = output, file = output_path)
 }
