@@ -12,7 +12,7 @@ param_limits <- data.frame(
 
 # Function for sampling parameter space
 
-sample_params <- function(param_limits, n = 3000, seed = 1, startingSimID = 1) {
+sample_params <- function(param_limits, n = 9000, seed = 1, startingSimID = 1) {
   set.seed(seed)
 
   output <- data.frame(simID = startingSimID:(startingSimID + n - 1))
