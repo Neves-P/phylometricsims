@@ -5,8 +5,6 @@
 #' @return List with phylo objects.
 convert_to_phylo <- function(brts) {
 
-  print(brts)
-  print(class(brts))
   tree <- lapply(
     X = brts,
     FUN = DDD::brts2phylo,

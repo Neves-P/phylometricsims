@@ -34,20 +34,24 @@ run_pipeline <- function(param_set,
     )
   }
   sim_pars <- param_space[param_set, ]
-
-  iw_sims <- run_iw_sims(
-    n_replicates = n_replicates,
-    sim_pars = sim_pars,
-    n_mainland_spec = 1000,
-    seed_start = seed_start
+  seed_time <- as.numeric(Sys.time())
+  set.seed(
+    seed_time,
+    kind = "Mersenne-Twister",
+    normal.kind = "Inversion",
+    sample.kind = "Rejection"
   )
 
-  if (iw_sims[[1]][[1]][[1]]$not_present == 1000) {
+  iw_sims <- run_iw_sims(
+    sim_pars = sim_pars,
+    n_mainland_spec = 1000
+  )
+
+  if (iw_sims[[1]][[1]]$not_present == 1000) {
     return()
   }
 
   iw_brts <- extract_first_lineage_brts(iw_sims = iw_sims)
-  print(iw_brts)
   phylo <- convert_to_phylo(brts = iw_brts)
 
   output <- list(iw_sims = iw_sims, iw_brts = iw_brts, phylo = phylo)

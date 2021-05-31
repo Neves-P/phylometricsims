@@ -14,35 +14,20 @@
 #'
 #' @author Pedro Neves
 run_iw_sims <- function(sim_pars,
-                        n_mainland_spec,
-                        n_replicates,
-                        seed_start) {
-
-  sim_output <- list()
-  seeds <- seed_start:n_replicates
+                        n_mainland_spec) {
 
   totaltime <- as.numeric(sim_pars[7])
   pars <- as.numeric(sim_pars[2:6])
 
-  for (i in seq_len(n_replicates)) {
-
-    set.seed(
-      seeds[i],
-      kind = "Mersenne-Twister",
-      normal.kind = "Inversion",
-      sample.kind = "Rejection"
-    )
-
-    sim_output[[i]] <- DAISIE::DAISIE_sim_constant_rate(
-      time = totaltime,
-      M = n_mainland_spec,
-      pars = pars,
-      replicates = 1,
-      divdepmodel = "IW",
-      plot_sims = FALSE,
-      verbose = FALSE
-    )
-  }
+  sim_output <- DAISIE::DAISIE_sim_constant_rate(
+    time = totaltime,
+    M = n_mainland_spec,
+    pars = pars,
+    replicates = 1,
+    divdepmodel = "IW",
+    plot_sims = FALSE,
+    verbose = FALSE
+  )
 
   return(sim_output)
 }
