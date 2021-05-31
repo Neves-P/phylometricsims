@@ -5,16 +5,13 @@
 
 <!-- badges: start -->
 
-![GitHub release (latest by date including
-pre-releases)](https://img.shields.io/github/v/release/Neves-P/phylometricsims?include_prereleases)
+![GitHub R package
+version](https://img.shields.io/github/r-package/v/Neves-P/phylometricsims)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4034884.svg)](https://doi.org/10.5281/zenodo.4034884)
 [![Project Status: WIP – Initial development is in progress, but there
 has not yet been a stable, usable release suitable for the
-public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
-[![Travis build
-status](https://travis-ci.com/Neves-P/phylometricsims.svg?branch=master)](https://travis-ci.com/Neves-P/phylometricsims)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/Neves-P/phylometricsims?branch=master&svg=true)](https://ci.appveyor.com/project/Neves-P/phylometricsims)
+public.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![R-CMD-check](https://github.com/Neves-P/phylometricsims/workflows/R-CMD-check/badge.svg)](https://github.com/Neves-P/phylometricsims/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/Neves-P/phylometricsims/branch/master/graph/badge.svg)](https://codecov.io/gh/Neves-P/phylometricsims?branch=master)
 <!-- badges: end -->
