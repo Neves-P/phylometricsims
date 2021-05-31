@@ -1,12 +1,12 @@
 test_that("run_pipeline reference test", {
 
 
-  expect_silent(out <- run_pipeline(
+  out <- run_pipeline(
     param_set = 1,
     n_replicates = 1,
     seed_start = 1,
     save_to_file = FALSE
-  ))
+  )
 
 
   # Ran once to generate reference file
