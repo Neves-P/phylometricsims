@@ -28,8 +28,17 @@ run_seldig_experiment <- function(n_param_sets_to_run) {
 
   pb <- txtProgressBar(min = 0, max = n_param_sets_to_run, style = 3)
 
+  seed_time <- as.numeric(Sys.time())
+  set.seed(
+    seed_time,
+    kind = "Mersenne-Twister",
+    normal.kind = "Inversion",
+    sample.kind = "Rejection"
+  )
+
   for (i in seq_len(n_param_sets_to_run)) {
     run_pipeline(param_set = i)
     setTxtProgressBar(pb, i)
   }
+
 }

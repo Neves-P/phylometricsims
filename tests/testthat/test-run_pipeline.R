@@ -1,6 +1,6 @@
 test_that("run_pipeline reference test", {
 
-
+  set.seed(1)
   out <- run_pipeline(
     param_set = 1,
     save_to_file = FALSE
@@ -17,7 +17,7 @@ test_that("run_pipeline reference test", {
 
 
   expect_length(out, 3)
-  expect_length(out$iw_brts[[1]], 2)
-  expect_length(out$phylo[[1]], 4)
-
+  expect_length(out$iw_brts, 2)
+  expect_length(out$phylo, 4)
+  expect_true(ape::is.rooted.phylo(out$phylo))
 })

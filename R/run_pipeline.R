@@ -32,13 +32,6 @@ run_pipeline <- function(param_set,
     )
   }
   sim_pars <- param_space[param_set, ]
-  seed_time <- as.numeric(Sys.time())
-  set.seed(
-    seed_time,
-    kind = "Mersenne-Twister",
-    normal.kind = "Inversion",
-    sample.kind = "Rejection"
-  )
 
   iw_sims <- run_iw_sims(
     sim_pars = sim_pars,
@@ -50,7 +43,7 @@ run_pipeline <- function(param_set,
   }
 
   iw_brts <- extract_first_lineage_brts(iw_sims = iw_sims)
-  phylo <- convert_to_phylo(brts = iw_brts)
+  phylo <- DDD::brts2phylo(times = iw_brts, root = FALSE, tip.label = NULL)
 
   output <- list(iw_sims = iw_sims, iw_brts = iw_brts, phylo = phylo)
   sim_id <- as.character(sim_pars[1])
