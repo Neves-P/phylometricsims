@@ -59,6 +59,7 @@ brts2phylo <- function(times,root=FALSE,tip.label=NULL)
   }
 
   class(phy) <- "phylo"
+  print(phy)
 
   phy <- stats::reorder(phy)
   ## to avoid crossings when converting with as.hclust:
