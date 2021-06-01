@@ -58,8 +58,10 @@ brts2phylo <- function(times,root=FALSE,tip.label=NULL)
     phy$root <- times[n] - times[n-1]
   }
 
+  print(class(phy))
   class(phy) <- "phylo"
   print(phy)
+  print(class(phy))
 
   phy <- stats::reorder(phy)
   ## to avoid crossings when converting with as.hclust:
