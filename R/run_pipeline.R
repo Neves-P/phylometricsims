@@ -91,6 +91,7 @@ run_pipeline <- function(n_param_sets_to_run,
     output <- list(iw_sims = iw_sims, iw_brts = iw_brts, phylo = phylo)
 
     if (save_to_file && length(phylo$tip.label) >= 20) {
+      Sys.sleep(1)
       output_name <- paste0("ve_", param_set, ".rds")
       if (!dir.exists("output")) dir.create("output")
       output_path <- file.path("output", output_name)
@@ -111,7 +112,6 @@ run_pipeline <- function(n_param_sets_to_run,
         col.names = FALSE,
         row.names = FALSE
       )
-
       saveRDS(object = output, file = output_path)
       valid_param_set <- valid_param_set + 1
     }
