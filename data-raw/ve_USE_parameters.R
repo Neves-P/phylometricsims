@@ -32,7 +32,7 @@ param_space <- sample_params(param_limits)
 
 write.csv(
   x = param_space,
-  file = "inst/extdata/ve_USE_parameters.csv",
+  file = "inst/extdata/ve_USE_parameters_full.csv",
   row.names = FALSE
 )
 

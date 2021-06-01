@@ -12,7 +12,8 @@ default_params_doc(
   param_set,
   brts,
   n_param_sets_to_run,
-  save_to_file
+  save_to_file,
+  test_seed
 )
 }
 \arguments{
@@ -47,6 +48,9 @@ columns in the parameter space file) should be simulated.}
 
 \item{save_to_file}{Boolean stating if output of pipeline should be saved
 as an \code{.rds} file in \verb{./output/}}
+
+\item{test_seed}{A boolean, which sets the seed to 1. Defaults to \code{FALSE},
+should only be set to \code{TRUE} for testing.}
 }
 \value{
 Nothing

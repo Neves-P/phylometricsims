@@ -2,6 +2,3 @@
 
 export(brts2phylo)
 export(run_pipeline)
-export(run_seldig_experiment)
-importFrom(utils,setTxtProgressBar)
-importFrom(utils,txtProgressBar)

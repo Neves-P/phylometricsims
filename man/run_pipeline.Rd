@@ -4,14 +4,17 @@
 \alias{run_pipeline}
 \title{Run the pipeline for a single parameter set}
 \usage{
-run_pipeline(param_set, save_to_file = TRUE)
+run_pipeline(n_param_sets_to_run, save_to_file = TRUE, test_seed = FALSE)
 }
 \arguments{
-\item{param_set}{Positive integer. Corresponds to one line of the param_space
-data frame.}
+\item{n_param_sets_to_run}{Integer with number of parameter sets (i.e.,
+columns in the parameter space file) should be simulated.}
 
 \item{save_to_file}{Boolean stating if output of pipeline should be saved
 as an \code{.rds} file in \verb{./output/}}
+
+\item{test_seed}{A boolean, which sets the seed to 1. Defaults to \code{FALSE},
+should only be set to \code{TRUE} for testing.}
 }
 \value{
 Saves output object to output and trees folder. Generate .tree file if >
