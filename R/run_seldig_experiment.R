@@ -41,4 +41,5 @@ run_seldig_experiment <- function(n_param_sets_to_run) {
     setTxtProgressBar(pb, i)
   }
 
+  saveRDS(seed_time, "output/seed_time.rds")
 }
