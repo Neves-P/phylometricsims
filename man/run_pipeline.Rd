@@ -10,7 +10,8 @@ run_pipeline(param_set, save_to_file = TRUE)
 \item{param_set}{Positive integer. Corresponds to one line of the param_space
 data frame.}
 
-\item{save_to_file}{}
+\item{save_to_file}{Boolean stating if output of pipeline should be saved
+as an \code{.rds} file in \verb{./output/}}
 }
 \value{
 Saves output object to output and trees folder. Generate .tree file if >

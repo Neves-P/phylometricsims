@@ -45,13 +45,8 @@ data frame.}
 \item{n_param_sets_to_run}{Integer with number of parameter sets (i.e.,
 columns in the parameter space file) should be simulated.}
 
-\item{save_to_file}{}
-
-\item{n_replicates}{Positive integer with the total number of replicates of
-the same island that should be simulated.}
-
-\item{seed_start}{Integer specifying the seed of replicate 1. Each replicate
-a given param set will be simulated using seed \code{1:n_replicates}.}
+\item{save_to_file}{Boolean stating if output of pipeline should be saved
+as an \code{.rds} file in \verb{./output/}}
 }
 \value{
 Nothing

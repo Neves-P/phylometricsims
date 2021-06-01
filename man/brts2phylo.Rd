@@ -19,3 +19,6 @@ A phylo
 \description{
 A copy of function from DDD, to debug on GHA
 }
+\author{
+Rampal S. Etienne, Pedro Neves
+}

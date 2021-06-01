@@ -19,9 +19,7 @@ Extract first lineagebranching times vector
 \examples{
 out <- phylometricsims:::run_iw_sims(
   sim_pars = c(1, 1, 2, 3, 4, 5, 5),
-  n_mainland_spec = 1000,
-  n_replicates = 2,
-  seed_start = 1
+  n_mainland_spec = 1000
 )
 
 brts_list <- phylometricsims:::extract_first_lineage_brts(out)
