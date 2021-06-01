@@ -27,6 +27,7 @@
 #' @param brts List with vector of branching times as returned by
 #' @param n_param_sets_to_run Integer with number of parameter sets (i.e.,
 #'   columns in the parameter space file) should be simulated.
+#' @param save_to_file
 #'
 #' @return Nothing
 #'
@@ -36,11 +37,10 @@
 default_params_doc <- function(totaltime,
                                sim_pars,
                                n_mainland_spec,
-                               n_replicates,
-                               seed_start,
                                iw_sims,
                                param_set,
                                brts,
-                               n_param_sets_to_run) {
+                               n_param_sets_to_run,
+                               save_to_file) {
   # Nothing
 }

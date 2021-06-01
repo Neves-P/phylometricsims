@@ -9,6 +9,8 @@ run_pipeline(param_set, save_to_file = TRUE)
 \arguments{
 \item{param_set}{Positive integer. Corresponds to one line of the param_space
 data frame.}
+
+\item{save_to_file}{}
 }
 \value{
 Saves output object to output and trees folder. Generate .tree file if >
