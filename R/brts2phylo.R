@@ -5,6 +5,7 @@
 #' @param times brts times
 #' @param root bool for rooting
 #' @param tip.label bool for labels
+#' @author Rampal S. Etienne, Pedro Neves
 #'
 #' @return A phylo
 #' @export
@@ -58,12 +59,8 @@ brts2phylo <- function(times,root=FALSE,tip.label=NULL)
     phy$root <- times[n] - times[n-1]
   }
 
-  print(class(phy))
   class(phy) <- "phylo"
-  print(phy)
-  print(class(phy))
-
-  phy <- stats::reorder(phy)
+  phy <- ape::reorder.phylo(phy)
   ## to avoid crossings when converting with as.hclust:
   phy$edge[phy$edge[, 2] <= n, 2] <- 1:n
 

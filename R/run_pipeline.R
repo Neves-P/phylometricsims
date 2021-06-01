@@ -43,7 +43,6 @@ run_pipeline <- function(param_set,
   }
 
   iw_brts <- extract_first_lineage_brts(iw_sims = iw_sims)
-  print(iw_brts)
   phylo <- brts2phylo(times = iw_brts, root = FALSE, tip.label = NULL)
 
   output <- list(iw_sims = iw_sims, iw_brts = iw_brts, phylo = phylo)
