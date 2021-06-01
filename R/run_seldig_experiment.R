@@ -24,13 +24,12 @@
 #' \dontrun{
 #' run_seldig_experiment(n_param_sets_to_run = 3000)
 #' }
-run_seldig_experiment <- function(n_param_sets_to_run,
-                                  n_replicates = 1) {
+run_seldig_experiment <- function(n_param_sets_to_run) {
 
   pb <- txtProgressBar(min = 0, max = n_param_sets_to_run, style = 3)
 
   for (i in seq_len(n_param_sets_to_run)) {
-    run_pipeline(param_set = i, n_replicates = n_replicates, seed_start = 1)
+    run_pipeline(param_set = i)
     setTxtProgressBar(pb, i)
   }
 }

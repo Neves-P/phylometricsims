@@ -20,8 +20,6 @@
 #'
 #' @author Pedro Neves
 run_pipeline <- function(param_set,
-                         n_replicates = 1,
-                         seed_start = 1,
                          save_to_file = TRUE) {
   if (!exists("param_space")) {
     param_space <- utils::read.csv(
@@ -57,20 +55,16 @@ run_pipeline <- function(param_set,
   output <- list(iw_sims = iw_sims, iw_brts = iw_brts, phylo = phylo)
   sim_id <- as.character(sim_pars[1])
 
-  output_name <- paste0("ve_", sim_id, ".rds")
-  if (!dir.exists("output")) dir.create("output")
-  output_path <- file.path("output", output_name)
+  if (save_to_file && length(phylo$tip.label) >= 20) {
+    output_name <- paste0("ve_", sim_id, ".rds")
+    if (!dir.exists("output")) dir.create("output")
+    output_path <- file.path("output", output_name)
 
-  tree_name <- paste0("ve_", sim_id, ".tre")
-  if (!dir.exists("trees")) dir.create("trees")
-  tree_path <- file.path("trees", tree_name)
+    tree_name <- paste0("ve_", sim_id, ".tre")
+    if (!dir.exists("trees")) dir.create("trees")
+    tree_path <- file.path("trees", tree_name)
+    ape::write.tree(phy = phylo, file = tree_path)
 
-  if (save_to_file) {
-    for (replicate in n_replicates) {
-      if (length(phylo[[replicate]]$tip.label) >= 20) {
-        ape::write.tree(phy = phylo[[replicate]], file = tree_path)
-      }
-    }
     saveRDS(object = output, file = output_path)
   } else {
     return(output)

@@ -4,14 +4,11 @@
 \alias{run_seldig_experiment}
 \title{Generate phylogenies for sELDIG study}
 \usage{
-run_seldig_experiment(n_param_sets_to_run, n_replicates = 1)
+run_seldig_experiment(n_param_sets_to_run)
 }
 \arguments{
 \item{n_param_sets_to_run}{Integer with number of parameter sets (i.e.,
 columns in the parameter space file) should be simulated.}
-
-\item{n_replicates}{Positive integer with the total number of replicates of
-the same island that should be simulated.}
 }
 \value{
 Saves output object to output and trees folder. Generate .tree file if >

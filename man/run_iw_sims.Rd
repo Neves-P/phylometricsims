@@ -4,7 +4,7 @@
 \alias{run_iw_sims}
 \title{Run DAISIE IW simulations}
 \usage{
-run_iw_sims(sim_pars, n_mainland_spec, n_replicates, seed_start)
+run_iw_sims(sim_pars, n_mainland_spec)
 }
 \arguments{
 \item{sim_pars}{Numeric vector with DAISIE simulation parameters, as used by
@@ -22,12 +22,6 @@ simulation.
 
 \item{n_mainland_spec}{Positive integer with total number of species in the
 mainland pool, which can colonize the island.}
-
-\item{n_replicates}{Positive integer with the total number of replicates of
-the same island that should be simulated.}
-
-\item{seed_start}{Integer specifying the seed of replicate 1. Each replicate
-a given param set will be simulated using seed \code{1:n_replicates}.}
 }
 \value{
 DAISIE object containing IW simulations.

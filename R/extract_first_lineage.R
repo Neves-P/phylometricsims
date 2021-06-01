@@ -18,10 +18,6 @@
 #' @author Pedro Neves
 extract_first_lineage_brts <- function(iw_sims) {
 
-  first_lineage_brts <- list()
-
-  for (i in seq_along(iw_sims)) {
-    first_lineage_brts[[i]] <- iw_sims[[i]][[1]][[2]]$branching_times
-  }
+  first_lineage_brts <- iw_sims[[1]][[2]]$branching_times
   first_lineage_brts
 }

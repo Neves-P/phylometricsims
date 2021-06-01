@@ -3,8 +3,6 @@ test_that("run_pipeline reference test", {
 
   out <- run_pipeline(
     param_set = 1,
-    n_replicates = 1,
-    seed_start = 1,
     save_to_file = FALSE
   )
 
