@@ -99,12 +99,16 @@ run_pipeline <- function(n_param_sets_to_run,
       if (!dir.exists("trees")) dir.create("trees")
       tree_path <- file.path("trees", tree_name)
       ape::write.tree(phy = phylo, file = tree_path)
-      valid_param_set_line <- c(valid_param_set, sim_pars[2:7])
+      valid_param_set_line <- data.frame(
+        "simID" = valid_param_set,
+        sim_pars[2:7]
+      )
 
-      utils::write.csv(
+      utils::write.table(
         x = valid_param_set_line,
         file = "ve_USE_parameters.csv",
         append = TRUE,
+        col.names = FALSE,
         row.names = FALSE
       )
 
